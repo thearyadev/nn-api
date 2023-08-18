@@ -4,5 +4,3 @@ services:
     build: .
     ports:
       - "8888:8888"
-
-      ghcr.io/thearyadev/nn-api:latest
