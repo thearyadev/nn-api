@@ -41,10 +41,18 @@ class Result:
 app = FastAPI()
 
 
-@app.post("/detect", response_model=Result)
-async def detect(request: Request):
+@app.post("/detect/base64", response_model=Result)
+async def detect_b64(request: Request):
     return Result.from_dict(
         NudeDetector().detect(
             np.array(Image.open(io.BytesIO(b64decode(await request.body()))))
+        )
+    )
+
+@app.post("/detect/raw", response_model=Result)
+async def detect_raw(request: Request):
+    return Result.from_dict(
+        NudeDetector().detect(
+            np.array(Image.open(io.BytesIO(await request.body())))
         )
     )
