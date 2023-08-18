@@ -3,4 +3,4 @@ services:
   nn-api:
     image: ghcr.io/thearyadev/nn-api:latest
     ports:
-      - "8888:8888"
+      - "8881:8888"

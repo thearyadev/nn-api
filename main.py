@@ -34,7 +34,7 @@ class Result:
     @classmethod
     def from_dict(cls, data: list[dict[str, list | int | float]]):
         return cls(
-            detection=[Detection(detection.get("label")) for detection in data],
+            detection=list(set([Detection(detection.get("label")) for detection in data])),
         )
 
 
