@@ -4,10 +4,9 @@ version = "0.1.0"
 description = ""
 authors = ["thearyadev <personal@aryankothari.dev>"]
 readme = "README.md"
-packages = [{include = "nn_api"}]
 
 [tool.poetry.dependencies]
-python = "3.11"
+python = "^3.11"
 nudenet = "^2.0.9"
 fastapi = "^0.101.1"
 uvicorn = "^0.23.2"

@@ -6,7 +6,6 @@ from base64 import b64decode
 from PIL import Image
 import io
 import numpy as np
-import cv2
 
 
 class Detection(Enum):
